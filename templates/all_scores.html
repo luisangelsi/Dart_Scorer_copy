@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+
+{% block head %}
+<div class="toolbar-left">
+    <a class="toolbar-button" href="{{ url_for("main_page")}}" class="main-menu-button">Go to Main Menu</a>
+</div>
+{% endblock %}
+{% block body %}
+<div class="container">
+    <div class="grid-item">
+      <img src="https://cdn.pixabay.com/photo/2014/03/25/17/00/target-297821_960_720.png" width="200" height="200" alt="Alternative text"/>
+    </div>
+</div>
+<div class="grid-item">
+    <ul>
+        {% for item in all_scores %}
+            <li>
+                {{ item.name }} : {{ item.score }}
+                <form action = "/delete" method = "post" style="display:inline-block;">
+                    <input name = "id" type = "hidden" value={{ item.id }}>
+                    <input type = "submit" value = "delete">
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
+</html>  

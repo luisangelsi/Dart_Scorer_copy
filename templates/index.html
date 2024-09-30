@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block head %}
+<div class="toolbar-left">
+    <a class="toolbar-button" href="{{ url_for("score_page")}}" class="main-menu-button">see scores</a>
+</div>
+{% endblock %}
+{% block body %}
+<div class="container">
+  <div class="grid-item">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Dart_board.png" alt="Alternative text"/>
+  </div>
+  <div class="grid-item">
+    <form action="/register" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name"><br><br>  
+
+
+      <label for="score">score:</label>
+      <input type="number"  
+  id="score" name="score"><br><br>
+
+  <label for="score2">score:</label>
+  <input type="number"  
+  id="score2" name="score2"><br><br>
+
+  <label for="score3">score:</label>
+  <input type="number"  
+  id="score3" name="score3"><br><br>
+
+  <label for="score4">score:</label>
+  <input type="number"  
+  id="score4" name="score4"><br><br>
+
+  <label for="score5">score:</label>
+  <input type="number"  
+  id="score5" name="score5"><br><br>
+
+
+  <input type="submit"  
+  value="Submit">
+  </form>
+  </div>
+  </div>
+{% endblock %}

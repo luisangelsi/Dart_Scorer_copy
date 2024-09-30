@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dart Scorer</title>
+  <style>
+    body {
+            background-color: white;
+        }
+    h1 {
+      font-family: Arial, sans-serif;
+      font-size: 32px;
+      color: red;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .container {
+            background-color: white;
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .grid-item {
+            flex: 1 0 auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+                /* Toolbar styles */
+                .toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black;
+            padding: 10px;
+        }
+
+        .toolbar-left, .toolbar-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .toolbar-item {
+            margin: 0 10px;
+        }
+
+        /* Button styles */
+        .toolbar-button {
+            padding: 5px 10px;
+            background-color: yellow;
+            color: black;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        li {
+        background-color: pink;
+        font-weight: bold;
+        padding: 10px;
+        margin: 20px;
+        border-radius: 5px;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .product-image {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+
+        .product-details {
+            margin-left: 20px;
+        }
+  </style>
+</head>
+<body>
+  <div class="toolbar">  
+    <h1>Dart Scorer</h1>
+    {% block head %}{% endblock %}
+    <!-- <div class="toolbar-right">
+        <input type="search" placeholder="Search">
+        <button class="toolbar-button">Search</button>
+    </div>-->
+</div>
+    {% block body %}{% endblock %}
+</body>
+</html>  
